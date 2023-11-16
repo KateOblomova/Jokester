@@ -1,0 +1,25 @@
+﻿@model JokesApp.Models.Joke
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="opacity: 100%; color:cadetblue">Details</h1>
+
+<div style="background-color:grey; color:black; padding: 20px">
+    <hr />
+    <dl class="row">
+
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JokeQuestion)
+        </dd>
+
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JokeAnswer)
+        </dd>
+    </dl>
+</div>
+<div style="background-color:grey; color:black; padding: 20px; ">
+    <a style="text-decoration:none; color:blue" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a style="text-decoration:none; color:blue" asp-action="Index">Back to List</a>
+</div>

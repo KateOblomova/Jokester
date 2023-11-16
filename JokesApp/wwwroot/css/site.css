@@ -1,0 +1,43 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 30px;
+        font-palette: dark;
+        color: aliceblue;
+        text-decoration: none;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    text-decoration: none
+}
+
+body {
+    margin-bottom: 20px;
+    background-image: url("https://www.nat-games.de/wp-content/uploads/2013/06/nat_games_the_last_of_us.jpg");
+    background-position-x:center;
+    background-repeat: no-repeat;
+    object-fit:cover;
+    opacity: 80%;
+    background-color:grey;
+}
+
+.container{
+    color:cadetblue
+}
+
+.joke-question{
+    color:aliceblue;
+}
+.table {
+    color: cornflowerblue;
+}
+td
+{
+    text-decoration: none
+}

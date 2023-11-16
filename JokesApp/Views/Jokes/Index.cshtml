@@ -1,0 +1,36 @@
+﻿@model IEnumerable<JokesApp.Models.Joke>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="color:aquamarine; background-color:grey; color: black">Discover all jokes</h1>
+
+
+<table class="table">
+    <thead class="joke-question">
+        <tr>
+            <th class="joke-question" >
+                @Html.DisplayNameFor(model => model.JokeQuestion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr style="background-color: grey">
+            <td class="joke-question">
+                @Html.DisplayFor(modelItem => item.JokeQuestion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" style="text-decoration:none">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" style="text-decoration:none">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" style="text-decoration:none">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    <a asp-action="Create" style="text-decoration:none; background-color:grey; color:blue; opacity: 100%">Create New</a>
+</p>
